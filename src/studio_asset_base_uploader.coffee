@@ -66,6 +66,7 @@ class StudioAssetBaseUploader
 
     @uploader.on "addedfile", (file) =>
       fileName = if file.name.length > 13 then jQuery.trim(file.name).substring(0, 10).trim(this) + "..." else file.name
+      $(file.previewElement).find('.message__attachment__filename').html(fileName)
 
     @uploader.on "thumbnail", (file) =>
       $(file.previewElement).find('.message__attachment__icon').remove()
