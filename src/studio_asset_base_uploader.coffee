@@ -84,7 +84,4 @@ class StudioAssetBaseUploader
         cb(undefined, {signature: data.transloadit.signature, params: data.transloadit.params, asset_id: data.asset.id})
 
 
-if module?
-  module.export = StudioAssetBaseUploader
-else
-  window.StudioAssetBaseUploader = StudioAssetBaseUploader
+window.StudioAssetBaseUploader = StudioAssetBaseUploader
