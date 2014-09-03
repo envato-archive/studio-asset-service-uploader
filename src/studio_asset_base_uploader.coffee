@@ -61,7 +61,7 @@ class StudioAssetBaseUploader
 
       @_createAsset (err, data) =>
         formData.append 'signature', data.signature
-        formData.append 'params', JSON.stringify(data.params)
+        formData.append 'params', data.params
         file.assetId = data.asset_id
 
     @uploader.on "addedfile", (file) =>
