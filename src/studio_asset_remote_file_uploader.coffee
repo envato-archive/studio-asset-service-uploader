@@ -12,3 +12,5 @@ class StudioAssetRemoteFileUploader
       data: @assetServiceLink.payload
       success: (data, status, xhr) =>
         callback(null, data)
+
+window.StudioAssetRemoteFileUploader = StudioAssetRemoteFileUploader
