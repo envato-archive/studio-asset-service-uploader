@@ -1,12 +1,16 @@
 {
   "name": "studio-asset-service-uploader",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "homepage": "https://github.com/envato/studio-asset-service-uploader",
   "authors": [
     "Shervin Aflatooni <shervinaflatooni@gmail.com>"
   ],
   "description": "A uploader for the studio asset service",
-  "main": ["lib/studio_asset_base_uploader.js", "lib/dropzone.js"],
+  "main": [
+    "lib/studio_asset_base_uploader.js",
+    "lib/studio_asset_remote_file_uploader.js",
+    "lib/dropzone.js"
+  ],
   "moduleType": [
     "globals"
   ],
