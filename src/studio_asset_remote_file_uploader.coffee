@@ -1,6 +1,6 @@
 class StudioAssetRemoteFileUploader
   constructor: (options) ->
-    @assetServiceLink = @options.assetServiceLink
+    @assetServiceLink = options.assetServiceLink
 
   uploadFile: (fileUrl, callback) ->
     @assetServiceLink.payload.fileUrl = fileUrl
@@ -11,6 +11,6 @@ class StudioAssetRemoteFileUploader
       method: 'POST'
       data: @assetServiceLink.payload
       success: (data, status, xhr) =>
-        callback(null, data)
+        callback(null, data.asset)
 
 window.StudioAssetRemoteFileUploader = StudioAssetRemoteFileUploader
