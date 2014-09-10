@@ -28,6 +28,9 @@ class StudioAssetBaseUploader
     throw "Not implemented, make sure to call _createUploader in your implementation"
 
   _createUploader: (uploaderOptions) ->
+    if @el.length == 0
+      return console.info("Unable to initialise uploader")
+
     @uploaderOptions = uploaderOptions
 
     # We don't support a fallback for < IE 10 users.
